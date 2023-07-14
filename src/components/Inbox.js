@@ -11,15 +11,18 @@ function Inbox() {
     }, []);
 
     return (
-        <div>
+        <div className="inbox-container">
             <h2>Inbox</h2>
-            {emailData.length > 0 ? (
-                emailData.map((email) => (
-                    <EmailPreview key={email.id} email={email} />
-                ))
-            ) : (
-                <p>No emails found.</p>
-            )}
+            <div className="mails-container">
+                {emailData.length > 0 ? (
+                    emailData.map((email) => (
+                        <EmailPreview key={email.id} email={email} />
+                    ))
+                ) : (
+                    <p>No emails found.</p>
+                )}
+            </div>
+
         </div>
     );
 }
