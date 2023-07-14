@@ -1,0 +1,93 @@
+/* App Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Navigation Styles */
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav button {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.nav button:last-child {
+    margin-right: 0;
+}
+
+/* Inbox/Sent Styles */
+.emails-container {
+    margin-bottom: 20px;
+}
+
+.email-preview {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.email-preview h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.email-preview p {
+    margin: 0;
+}
+
+/* Compose Form Styles */
+.compose-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.compose-form input,
+.compose-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.compose-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
