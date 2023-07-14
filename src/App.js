@@ -10,8 +10,10 @@ export default function App() {
 
     return (
       <div className="App">
-          <h1>Email</h1>
-          <Navigation setActivePage={setActivePage} />
+          <div className="header">
+              <h1>IKnowMail</h1>
+              <Navigation setActivePage={setActivePage} />
+          </div>
           {activePage === 'inbox' && <Inbox />}
           {activePage === 'compose' && <ComposeEmailForm />}
       </div>
