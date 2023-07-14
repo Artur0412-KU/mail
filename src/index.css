@@ -1,14 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 /* App Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.btn-container button {
+    font-family: 'Montserrat', sans-serif;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-container button:hover {
+    transition: .2s ease-in-out;
+    background-color: rgba(220, 20, 60, 0.23);
+    color: red;
+    font-weight: 700;
 }
 
 h1 {
@@ -91,3 +128,71 @@ h2 {
     cursor: pointer;
 }
 
+
+/* --------------- Inbox ----------------- */
+.inbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 70px 20px;
+}
+
+
+.mails-container {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/*---------------- Compose ---------------*/
+.compose-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: none;
+    margin-top: 70px;
+    margin-right: 70px;
+    margin-left: 70px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+}
+
+.compose-form h2 {
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+.compose-form input, .compose-form textarea {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.compose-form button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: crimson;
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.compose-form button:hover {
+    background-color: rgb(255, 255, 255);
+    color: crimson;
+    font-weight: 800;
+    transition: .2s ease-in-out;
+}
