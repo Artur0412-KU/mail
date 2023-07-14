@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from "react-dom";
 
 export default function ComposeEmailForm() {
+    const [recipient, setRecipient] = useState('');
     const [subject, setSubject] = useState('');
     const [body, setBody] = useState('');
 
@@ -9,48 +10,55 @@ export default function ComposeEmailForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Make API request to send email
-        const emailData = {
+        // Create an email object
+        const email = {
+            recipient: recipient,
             subject: subject,
-            body: body,
+            body: body
         };
 
-        fetch('your-api-endpoint', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(emailData),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Email sent successfully:', data);
-                setSubject('');
-                setBody('');
-            })
-            .catch(error => {
-                console.error('Error sending email:', error);
-            });
+        // Send the email (you can replace this with your own logic)
+        sendEmail(email);
+
+        // Reset form fields
+        setRecipient('');
+        setSubject('');
+        setBody('');
+    };
+
+    // Simulate sending the email (replace this with your own logic)
+    const sendEmail = (email) => {
+        console.log('Sending email:', email);
+        // Implement your own logic to send the email
     };
 
     return (
-        <div>
+        <div className="compose-form">
             <h2>Compose Email</h2>
             <form onSubmit={handleSubmit}>
+                <input
+                    type="email"
+                    placeholder="Recipient"
+                    value={recipient}
+                    onChange={(e) => setRecipient(e.target.value)}
+                    required
+                />
                 <input
                     type="text"
                     placeholder="Subject"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
+                    required
                 />
                 <textarea
                     placeholder="Body"
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
+                    required
                 />
                 <button type="submit">Send</button>
             </form>
         </div>
-    );
+    )
 
 }
