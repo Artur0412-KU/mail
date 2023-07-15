@@ -1,5 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
+/* --------- Dark - Light Theme -------------*/
+
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+.App.dark input[type="email"],
+.App.dark input[type="text"],
+.App.dark textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #ccc;
+}
+
+.App.dark input[type="email"]::placeholder,
+.App.dark input[type="text"]::placeholder,
+.App.dark textarea::placeholder {
+    color: #ccc;
+}
+
+.App.dark input[type="email"]:focus,
+.App.dark input[type="text"]:focus,
+.App.dark textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.compose-form.dark input:focus,
+.compose-form.dark textarea:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+
+body.dark .btn-container button {
+    background-color: rgba(51, 51, 51, 0.47);
+    color: #fff;
+}
+
+body.dark .btn-container button:hover {
+    background-color: rgba(220, 20, 60, 0.23);
+    color: #fff;
+}
+
+.App.dark .language-btn {
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    color: #fff;
+}
+
+.App.dark .language-btn:hover {
+    background: #fff;
+    color: rgba(220, 20, 60, 0.5);
+}
+
+.App.dark h1,
+.App.dark h2 {
+    color: #fff;
+}
+
+/* Inbox/Sent Styles */
+.App.dark .inbox-container {
+    color: #fff;
+}
+
+.App.dark .email-preview {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Compose Form Styles */
+.App.dark .compose-form {
+    background-color: #333;
+    color: #fff;
+}
+
 /* App Styles */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -46,6 +123,28 @@ body {
     background-color: rgba(220, 20, 60, 0.23);
     color: red;
     font-weight: 700;
+}
+
+.language-btn {
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    color: #fff;
+
+}
+
+.language-btn:hover {
+    background: white;
+    color: rgba(220, 20, 60, 0.5);
 }
 
 h1 {
@@ -181,7 +280,7 @@ h2 {
 
 .compose-form button {
     font-family: 'Montserrat', sans-serif;
-    background-color: crimson;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
     width: 100%;
     padding: 14px 20px;
     margin: 8px 0;
@@ -191,7 +290,7 @@ h2 {
 }
 
 .compose-form button:hover {
-    background-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     color: crimson;
     font-weight: 800;
     transition: .2s ease-in-out;
