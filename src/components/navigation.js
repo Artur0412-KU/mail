@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
+import ReactDOM from "react-dom";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export default function Navigation({ setActivePage, language, onLanguageChange }) {
-    const [isUkrainian, setIsUkrainian] = useState(language === 'Українська');
-
     const handleLanguageButtonClick = () => {
-        const newLanguage = isUkrainian ? 'English' : 'Українська';
+        const newLanguage = language === 'Українська' ? 'English' : 'Українська';
         onLanguageChange(newLanguage);
-        setIsUkrainian(!isUkrainian);
+    };
+
+    const handleThemeButtonClick = () => {
+        onThemeChange();
     };
 
     return (
-        <div className="btn-container">
+         <div className="btn-container">
             <button onClick={() => setActivePage('inbox')}>
-                {isUkrainian ? 'Вхідні' : 'Inbox'}
+                {language === 'Українська' ? 'Вхідні' : 'Inbox'}
             </button>
             <button onClick={() => setActivePage('compose')}>
-                {isUkrainian ? 'Створити' : 'Compose'}
+                {language === 'Українська' ? 'Створити' : 'Compose'}
             </button>
-            <button className="language-btn" onClick={handleLanguageButtonClick}>{isUkrainian ? 'English' : 'Українська'  }</button>
+            <button onClick={handleLanguageButtonClick}>
+                {language === 'Українська' ? 'English' : 'Українська'}
+            </button>
+            <button id="themeButton" onClick={handleThemeButtonClick}>
+                {theme === 'light' ? <LightModeIcon /> : <DarkModeIcon />}
+            </button>
+
         </div>
     );
 }
