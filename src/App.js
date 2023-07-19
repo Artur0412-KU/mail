@@ -15,6 +15,7 @@ export default function App() {
         setLanguage(newLanguage);
         const toggleLabel = newLanguage === 'Українська' ? 'Змінити тему' : 'Change Theme';
         setThemeToggleLabel(toggleLabel);
+   
     };
 
     const handleThemeChange = () => {
